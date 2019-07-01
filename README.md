@@ -41,6 +41,4 @@ Makers final engineering project - See a video here of the app in action( )
 * Touch the screen on a planet or star to find out more information
 
 ### Acknowledgements
-Makers Academy | Stuart Pethurst | Calum Darroch | Jose Quinones | Dominic White |
-
-### PS * To install this application a basic knowledge of coding is required. 
+Makers Academy | Stuart Pethurst | Calum Darroch | Jose Quinones | Dominic White
