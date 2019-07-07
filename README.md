@@ -1,6 +1,8 @@
 # StarGazer [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f325751f38b94a30bef75e07ac2bbca5)](https://app.codacy.com/app/CalumDarroch/stargazer?utm_source=github.com&utm_medium=referral&utm_content=jo-quin/stargazer&utm_campaign=Badge_Grade_Dashboard) [![GitHub contributors](https://img.shields.io/github/contributors/jo-quin/stargazer.svg)](https://github.com/jo-quin/stargazer/graphs/contributors)
 
-Makers final engineering project - See a video here of the app in action( )
+Makers final engineering project - See a video here of the app in action:
+
+[![StarGazer demo](https://img.youtube.com/vi/2mJJrip4emc/0.jpg)](https://www.youtube.com/watch?v=2mJJrip4emc)
 
 ### Team Project
 [Project Card Wall](https://github.com/jo-quin/stargazer/projects/1)
