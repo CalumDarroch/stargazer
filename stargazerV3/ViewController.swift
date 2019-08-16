@@ -11,35 +11,37 @@ import ARKit
 import SceneKit
 
 class ViewController: UIViewController {
-    
+
     let height = Float(70)
-    
+
     @IBOutlet weak var sceneView: ARSCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = .horizontal
         config.worldAlignment = .gravityAndHeading
-        
-        
+
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapped))
         tapGesture.numberOfTapsRequired = 1
         view.addGestureRecognizer(tapGesture)
-        
+
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
         doubleTapGesture.numberOfTapsRequired = 2
         view.addGestureRecognizer(doubleTapGesture)
-        
+
         tapGesture.require(toFail: tapGesture)
-        
+
         sceneView.session.run(config)
 
         readFileToCreateNodes(starsOrTags: "Stars")
-        
+
+        //Prompting Codacy.
+
     }
-    
+
     func readFileToCreateNodes(starsOrTags: String){
         let path = Bundle.main.path(forResource: "stars.txt", ofType: nil)! // add planet to the same file?
         let content = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
@@ -48,31 +50,31 @@ class ViewController: UIViewController {
             createCelestialNodes(line: $0, starsOrTags: starsOrTags)
         }
     }
-    
+
     func createCelestialNodes(line: String, starsOrTags: String){
         let line = line.components(separatedBy: " ")
-        
+
         // Checks for empty line
         if line.count > 1 {
-            
+
             // Declination
             let dec = Float(line[5].components(separatedBy: "°")[0])
-            
+
             // Where to look based on our postion London Latitude (51.49)
             let wtl = dec! - 51.49
-            
+
             // Right Ascension for the current month
             let raNow = Int(line[3].components(separatedBy: "h")[0])! - 6 // 6 is hardcoded for month of June
-            
+
             let name = line[1]
-            
+
             // Type Planet or Star
             let type = line [0]
-            
+
             // Find the celestial bodies that we can see from out location
             // Discard any celestial body that stays behind the horizon
             if wtl >= -90 {
-                
+
                 // Select the stars that are in the sky during night time
                 if 13 > raNow && raNow > 0 {
                     if starsOrTags == "Stars" {
@@ -80,7 +82,7 @@ class ViewController: UIViewController {
                     } else if starsOrTags == "Tags" {
                         addTag(name: name, position: SCNVector3(Float((raNow - 6) * 25), height, Float((dec! * -1) * 4 )), type: type)
                     }
-                  
+
                 // Select the circumpolar stars (always on our sky)
                 } else if (90 - dec!) <= 50  {
                     if starsOrTags == "Stars" {
@@ -92,9 +94,9 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+
     func addCelestialBody(x: Float, z: Float, name: String, type: String ){
-        
+
         var radius = 20
         if type == "planet" {
             if name == "Moon" {
@@ -123,7 +125,7 @@ class ViewController: UIViewController {
         tagGeometry.font = UIFont(name: "EliteDanger", size: 8)
         tag.geometry = tagGeometry
         tag.geometry?.firstMaterial?.diffuse.contents = UIColor(red: 0.15, green: 0.78, blue: 0.85, alpha: 1.0)
-        
+
         // check if the tag is for a planet or for a star to adjust dy and color
         var dyLocation = 1.5
         if type == "planet" {
@@ -140,30 +142,30 @@ class ViewController: UIViewController {
         let constraint = SCNLookAtConstraint(target: cameraNode)
         constraint.isGimbalLockEnabled = true
         tag.constraints = [constraint]
-        
-        
+
+
         // changes the center of the text to be the center of the node
         let (min, max) = tag.boundingBox
         let dx = min.x - 0.5 * (max.x - min.x)
         let dy = min.y + Float(dyLocation) * (max.y - min.y) // to position below
         let dz = min.z + 0.5 * (max.z - min.z)
         tag.pivot = SCNMatrix4MakeTranslation(dx, dy, dz)
-        
+
         // rotates the text to face the camera
         tag.pivot = SCNMatrix4Rotate(tag.pivot, Float.pi, 0, 1, 0)
-        
+
         sceneView.scene.rootNode.addChildNode(tag)
     }
-    
+
     @objc func tapped(gestureRecognizer: UITapGestureRecognizer) {
         readFileToCreateNodes(starsOrTags: "Tags")
     }
-    
+
     @objc func doubleTapped(gestureRecognizer: UITapGestureRecognizer) {
         resetScene()
-        
+
     }
-    
+
     func resetScene() {
         sceneView.session.pause()
         sceneView.scene.rootNode.enumerateChildNodes { (node, _) in
@@ -171,14 +173,14 @@ class ViewController: UIViewController {
                 node.removeFromParentNode()
             }
         }
-        
+
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = .horizontal
         config.worldAlignment = .gravityAndHeading
-        
+
         sceneView.session.run(config)
     }
-    
+
     func addCoordinates(text: String, x: Int, y: Int, z: Int, rotation: CGFloat) {
         let text = SCNNode(geometry: SCNText(string: text, extrusionDepth: 5))
         text.position = SCNVector3(x, y, z )
@@ -187,4 +189,3 @@ class ViewController: UIViewController {
         sceneView.scene.rootNode.addChildNode(text)
     }
 }
-
