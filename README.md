@@ -5,7 +5,7 @@ Makers final engineering project - See a video here of the app in action:
 [![StarGazer demo](https://img.youtube.com/vi/2mJJrip4emc/0.jpg)](https://www.youtube.com/watch?v=2mJJrip4emc)
 
 ### Team Project
-[Project Card Wall](https://github.com/jo-quin/stargazer/projects/1)
+We used GitHub's [Project Card Wall](https://github.com/jo-quin/stargazer/projects/1) feature for organising tasks.
 
 ### Learning Process Documentation
 [StarGazer Wiki](https://github.com/jo-quin/stargazer.wiki.git)
