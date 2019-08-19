@@ -1,1 +1,6 @@
-language: objective-c
+language: swift
+os: osx
+osx_image: xcode11
+xcode_project: stargazerV3.xcodeproj
+xcode_scheme: stargazerV3
+xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone X
