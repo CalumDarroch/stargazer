@@ -28,17 +28,17 @@ We used GitHub's [Project Card Wall](https://github.com/jo-quin/stargazer/projec
 6.  Now sit back look around and enjoy the AR view on your iPhone :iphone:
 
 ## Technologies
-  *  Xcode:
-    *  ARKit
-    *  SceneKit
-    *  UIKit
+*  Xcode:
+ *  ARKit
+ *  SceneKit
+ *  UIKit
 
-  *  iPhone running iOS 12.2 (requires iOS 11 or higher)
+*  iPhone running iOS 12.2 (requires iOS 11 or higher)
 
-  *  https://in-the-sky.org/location.php
+*  https://in-the-sky.org/location.php
 
-  *  Launguage/s:
-    *  Swift
+*  Launguage/s:
+ *  Swift
 
 ## Improvements / Status
 
