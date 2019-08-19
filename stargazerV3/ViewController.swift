@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         config.planeDetection = .horizontal
         config.worldAlignment = .gravityAndHeading
 
-
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapped))
         tapGesture.numberOfTapsRequired = 1
         view.addGestureRecognizer(tapGesture)
@@ -49,7 +48,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func createCelestialNodes(line: String, starsOrTags: String){
+    func createCelestialNodes(line: String, starsOrTags: String) {
         let line = line.components(separatedBy: " ")
 
         // Checks for empty line
@@ -93,7 +92,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func addCelestialBody(x: Float, z: Float, name: String, type: String ){
+    func addCelestialBody(x: Float, z: Float, name: String, type: String ) {
 
         var radius = 20
         if type == "planet" {
@@ -101,7 +100,7 @@ class ViewController: UIViewController {
                 radius = 10
             }
             let sphere = SCNNode(geometry: SCNSphere(radius: CGFloat(radius)))
-            sphere.position = SCNVector3(x: x, y: height, z: z) // y is the height which help us to adjust spread of celestial bodies
+            sphere.position = SCNVector3(x: x, y: height, z: z) // y helps us adjust spread of celestial bodies
             let rotate = SCNAction.rotateBy(x: 0, y: 0.5, z: 0, duration: 1.0)
             let continuedRotate = SCNAction.repeatForever(rotate)
             sphere.runAction(continuedRotate)
@@ -116,7 +115,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func addTag(name: String, position: SCNVector3, type: String){
+    func addTag(name: String, position: SCNVector3, type: String) {
         let tag = SCNNode()
         let tagGeometry = SCNText(string: name.lowercased(), extrusionDepth: 5)
         tagGeometry.firstMaterial?.diffuse.contents = UIColor.red
