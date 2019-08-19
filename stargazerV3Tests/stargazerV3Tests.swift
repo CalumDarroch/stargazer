@@ -9,7 +9,7 @@
 import XCTest
 @testable import stargazerV3
 
-class stargazerV3Tests: XCTestCase {
+class StargazerV3Tests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

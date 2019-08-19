@@ -38,11 +38,9 @@ class ViewController: UIViewController {
 
         readFileToCreateNodes(starsOrTags: "Stars")
 
-        //Prompting Codacy.
-
     }
 
-    func readFileToCreateNodes(starsOrTags: String){
+    func readFileToCreateNodes(starsOrTags: String) {
         let path = Bundle.main.path(forResource: "stars.txt", ofType: nil)! // add planet to the same file?
         let content = try! String(contentsOfFile: path, encoding: String.Encoding.utf8)
         let lines = content.components(separatedBy: "\n")
@@ -84,7 +82,7 @@ class ViewController: UIViewController {
                     }
 
                 // Select the circumpolar stars (always on our sky)
-                } else if (90 - dec!) <= 50  {
+                } else if (90 - dec!) <= 50 {
                     if starsOrTags == "Stars" {
                         addCelestialBody(x: Float((raNow - 6) * 25), z: Float(dec! * -1) * 4, name: name, type: type)
                     } else if starsOrTags == "Tags" {
@@ -142,7 +140,6 @@ class ViewController: UIViewController {
         let constraint = SCNLookAtConstraint(target: cameraNode)
         constraint.isGimbalLockEnabled = true
         tag.constraints = [constraint]
-
 
         // changes the center of the text to be the center of the node
         let (min, max) = tag.boundingBox
