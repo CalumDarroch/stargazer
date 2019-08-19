@@ -1,4 +1,4 @@
-# StarGazer [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f325751f38b94a30bef75e07ac2bbca5)](https://app.codacy.com/app/CalumDarroch/stargazer?utm_source=github.com&utm_medium=referral&utm_content=jo-quin/stargazer&utm_campaign=Badge_Grade_Dashboard) [![GitHub contributors](https://img.shields.io/github/contributors/jo-quin/stargazer.svg)](https://github.com/jo-quin/stargazer/graphs/contributors)
+# StarGazer [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c6e85c7d6c8b416fa266512dba8b4e6e)](https://www.codacy.com/app/StarGeezers/stargazer?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CalumDarroch/stargazer&amp;utm_campaign=Badge_Grade) [![GitHub contributors](https://img.shields.io/github/contributors/jo-quin/stargazer.svg)](https://github.com/jo-quin/stargazer/graphs/contributors)
 
 Makers final engineering project - See a video here of the app in action:
 
