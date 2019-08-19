@@ -11,41 +11,41 @@ We used GitHub's [Project Card Wall](https://github.com/jo-quin/stargazer/projec
 [StarGazer Wiki](https://github.com/jo-quin/stargazer.wiki.git)
 
 ## Installation *
-1.  Download and install [Xcode](https://developer.apple.com/support/xcode/). You can get more information on how to use Xcode [here](https://developer.apple.com/xcode/).
+1. Download and install [Xcode](https://developer.apple.com/support/xcode/). You can get more information on how to use Xcode [here](https://developer.apple.com/xcode/).
 
-2.  Clone or download the StarGazer project.
+2. Clone or download the StarGazer project.
 
-3.  Open Xcode, select the StarGazer file (note you will need an apple ID and password to install the app, you can create one [here](https://support.apple.com/en-gb/HT204316)).
+3. Open Xcode, select the StarGazer file (note you will need an apple ID and password to install the app, you can create one [here](https://support.apple.com/en-gb/HT204316)).
 
-4.  Connect iPhone to your computer.
-5.  Run the build using the play button in Xcode
-     *  you will need to trust the developer from your phone
-      *  Settings
-      *  General
-      *  Device Management
-      *  and trust the developer (it will be your apple ID) - this will allow you to install the app
+4. Connect iPhone to your computer.
+5. Run the build using the play button in Xcode
+* You will need to trust the developer from your phone by following method:
+  * Settings
+  * General
+  * Device Management
+  * and trust the developer (it will be your apple ID) - this will allow you to install the app
 
 6.  Now sit back, look around and enjoy the AR view on your iPhone! :iphone:
 
 ## Technologies
-  *  Xcode:
-   * ARKit
-   * SceneKit
-   * UIKit
+* Xcode:
+  * ARKit
+  * SceneKit
+  * UIKit
 
-  *  iPhone running iOS 12.2 (requires iOS 11 or higher)
+* iPhone running iOS 12.2 (requires iOS 11 or higher)
 
-  *  [In-The-Sky](https://in-the-sky.org/location.php)
+* [In-The-Sky](https://in-the-sky.org/location.php)
 
-  *  Launguage/s:
-   * Swift
+* Language(s):
+  * Swift
 
 ## Improvements / Status
 
 ## Using StarGazer
 
-  *  Open the app, you will see a view from your camera with AR planets and stars
-  *  Touch the screen on a planet or star to find out more information
+* Open the app, you will see a view from your camera with AR planets and stars
+* Touch the screen on a planet or star to find out more information
 
 ## Acknowledgements
 Makers Academy | Stuart Pethurst | Calum Darroch | Jose Quinones | Dominic White
