@@ -79,7 +79,7 @@ We also managed to fulfil some stretch goals in this time:
 * Implementing a touch funcitonality that allows you to add-in and remove the names by touching the screen.
 * Adding a custom font for the names and using different colours for stars and planets.
 
-While we were very pelased with the end result, there were some features that we couldn't implement in the time available. If we had time in future, here is some of the functionality we would like to add in:
+While we were very pelased with the end result, there were some features that we couldn't implement in the time available. If we have time in future, here is some of the functionality we would like to add in:
 * __Info-on-click__: A feature that would allow the user to click a star or planet on the screen and see some information about it.
 * __Stars moving in real time__: This would require the app to continually update the positions of the stars, probably using an astronomy API such as [Skyfield](https://github.com/skyfielders/python-skyfield).
 * __Darkened sky__: Implementing a tile system that places a dark night sky behind the stars, or perhaps a feature that using data from the iPhone's gyroscope to darken the camera feed (but not the AR objects) as the user tilts the phone upwards.
