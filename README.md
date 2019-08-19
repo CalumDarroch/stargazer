@@ -29,16 +29,16 @@ We used GitHub's [Project Card Wall](https://github.com/jo-quin/stargazer/projec
 
 ## Technologies
 *  Xcode:
- *  ARKit
- *  SceneKit
- *  UIKit
+  * ARKit
+  * SceneKit
+  * UIKit
 
 *  iPhone running iOS 12.2 (requires iOS 11 or higher)
 
 *  https://in-the-sky.org/location.php
 
 *  Launguage/s:
- *  Swift
+  * Swift
 
 ## Improvements / Status
 
